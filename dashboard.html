@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>داشبورد گردشگری</title>
+    <link rel="icon" href="Pics/2020-EB-HCA-Healthcare-FC.png" />
+    <link rel="stylesheet" href="Styles/dashboard.css" />
+  </head>
+  <body>
+    <main>
+      <aside class="right">
+        <div id="all-articles">
+          <div onclick="activateArticle(0);">مشاهده نظرات</div>
+          <div onclick="activateArticle(1);">مجله سلامت</div>
+          <div onclick="activateArticle(2);">پکیج ها</div>
+          <div onclick="activateArticle(3);">هتل ها</div>
+          <div onclick="activateArticle(4);">پزشکان</div>
+          <div onclick="activateArticle(5);">جاذبه ها</div>
+          <div onclick="activateArticle(6);">ویدئو ها</div>
+        </div>
+        <div id="exit">
+          <img src="Pics/icons/exit.png" alt="exit" />
+          <h5>خروج</h5>
+        </div>
+      </aside>
+
+      <aside class="left">
+        <header>
+          <div class="header">
+            <div class="profile">
+              <div>
+                <div id="prof">
+                  <img src="Pics/profile.png" alt="profile pic" />
+                  <h5>کاربر: <b>قنبر قنبری</b></h5>
+                  <h6>دسترسی: <b>مدیر</b></h6>
+                </div>
+              </div>
+            </div>
+            <div id="date"></div>
+            <div id="clock"></div>
+            <div id="view">
+              تعداد بازدید:
+              <p>1038</p>
+            </div>
+          </div>
+        </header>
+
+        <article class="default-article">
+          <h1>!به پنل گردشگری خوش آمدید</h1>
+          <h3>
+            برای انتخاب و تغییر در قسمت دلخواه، از
+            <span>منوی سمت راست</span> انتخاب کنید.
+          </h3>
+        </article>
+        <article style="display: none" class="comments">
+          <div class="comment-holder">
+            <section class="view-port">
+              <div class="commenter">
+                <div>
+                  <p id="commenter-name">نام کاربر</p>
+                  <p id="commenter-phone">تلفن کاربر</p>
+                </div>
+                <div id="comment-time">
+                  <p style="font-size: 14px">ساعت ثبت نظر: <br /></p>
+                </div>
+                <div id="comment-date">
+                  <p style="font-size: 14px">تاریخ ثبت نظر: <br /></p>
+                </div>
+              </div>
+              <div class="img-vid"></div>
+              <div class="comment-text"><textarea>متن پیام</textarea></div>
+            </section>
+            <section class="preview-port">
+              <div>
+                <div onclick="viewcomment(0)" class="preview-comments">
+                  <p>
+                    سلام خسته نباشید. چجوری میتونم برای عمل بینی ثبت نام کنم؟ و
+                    قیمتش چقد میشه اگه توی ایران باشم؟
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(1)" class="preview-comments">
+                  <p>
+                    فارسروید به عنوان بروزترین مرجع اندروید بروزرسانی ها را
+                    همزمان با انتشار در گوگل پلی عرضه می کند و قادرید به محض
+                    دیدن پیام بروزرسانی به این صفحه مراجعه کرده و بازی را با یک
+                    کلیک و اینترنت نیم بها دریافت کنید.
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(2)" class="preview-comments">
+                  <p>
+                    تنها کافیست فایل نصبی xapk (در فایل فشرده زیپ دانلودی از
+                    فارسروید موجود است) نسخه جدید را دانلود کنید و بعد از این
+                    کار، با آموزش موجود در این صفحه از فارس روید ؛ بازی تان را
+                    بروز کنید [نیازی به حذف بازی نیست]
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(3)" class="preview-comments">
+                  <p>
+                    در حال حاضر بله - امکان ورود به بازی بدون نیاز به تغییر ای
+                    پی وجود ندارد [ظاهرا یک اختلال برای ورود بعضی مواقع پیش می
+                    اید که کافیست برای ورود چند لحظه فیلت-رشکن خود را فعال کنید
+                    تا مشکل حل گردد]
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(4)" class="preview-comments">
+                  <p>
+                    از داخل بازی باید حساب بازی خود را به شبکه اجتماعی دلخواه
+                    وصل کنید - امکان وصل کردن حساب بازی به جیمیل، فیسبوک و سایت
+                    سازنده بازی وجود دارد که ما به شما پیشنهاد می دهیم گزینه آخر
+                    یعنی وصل کردن حساب بازی به حساب سایت سازنده بازی یعنی
+                    Activision را انتخاب کنید.
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(5)" class="preview-comments">
+                  <p>
+                    بازی اینترنتی، آنلاین و تحت سرور است و قوی ترین ابزارهای
+                    امنیتی روی سرور پیاده شده که به هیچ وجه و تحت هیچ شرایطی
+                    امکان هک کردن بازی و دریافت CP رایگان وجود ندارد.
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(6)" class="preview-comments">
+                  <p>
+                    به طور کلی در صنعت بازی های ویدئویی Battle pass یک نوع روش
+                    کسب درآمد است که محتوای اضافه بازی را به صورت رایگان - پولی
+                    از طریق سیستم طبقه بندی شده به کاربر ارائه می دهد. در بازی
+                    Call of Duty Mobile نیز سازنده یعنی Activision Publishing در
+                    هر فصل یک بتل پس با 50 مرحله/چالش را به کاربر ارائه می دهد
+                    که با انجام آن ها امتیاز به دست می اورید و با این امتیازهای
+                    کسب شده می توانید اسکین؛ تفنگ و دیگر آیتم های بازی را بخرید.
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(6)" class="preview-comments">
+                  <p>
+                    به طور کلی در صنعت بازی های ویدئویی Battle pass یک نوع روش
+                    کسب درآمد است که محتوای اضافه بازی را به صورت رایگان - پولی
+                    از طریق سیستم طبقه بندی شده به کاربر ارائه می دهد. در بازی
+                    Call of Duty Mobile نیز سازنده یعنی Activision Publishing در
+                    هر فصل یک بتل پس با 50 مرحله/چالش را به کاربر ارائه می دهد
+                    که با انجام آن ها امتیاز به دست می اورید و با این امتیازهای
+                    کسب شده می توانید اسکین؛ تفنگ و دیگر آیتم های بازی را بخرید.
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(6)" class="preview-comments">
+                  <p>
+                    به طور کلی در صنعت بازی های ویدئویی Battle pass یک نوع روش
+                    کسب درآمد است که محتوای اضافه بازی را به صورت رایگان - پولی
+                    از طریق سیستم طبقه بندی شده به کاربر ارائه می دهد. در بازی
+                    Call of Duty Mobile نیز سازنده یعنی Activision Publishing در
+                    هر فصل یک بتل پس با 50 مرحله/چالش را به کاربر ارائه می دهد
+                    که با انجام آن ها امتیاز به دست می اورید و با این امتیازهای
+                    کسب شده می توانید اسکین؛ تفنگ و دیگر آیتم های بازی را بخرید.
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(6)" class="preview-comments">
+                  <p>
+                    به طور کلی در صنعت بازی های ویدئویی Battle pass یک نوع روش
+                    کسب درآمد است که محتوای اضافه بازی را به صورت رایگان - پولی
+                    از طریق سیستم طبقه بندی شده به کاربر ارائه می دهد. در بازی
+                    Call of Duty Mobile نیز سازنده یعنی Activision Publishing در
+                    هر فصل یک بتل پس با 50 مرحله/چالش را به کاربر ارائه می دهد
+                    که با انجام آن ها امتیاز به دست می اورید و با این امتیازهای
+                    کسب شده می توانید اسکین؛ تفنگ و دیگر آیتم های بازی را بخرید.
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(6)" class="preview-comments">
+                  <p>
+                    به طور کلی در صنعت بازی های ویدئویی Battle pass یک نوع روش
+                    کسب درآمد است که محتوای اضافه بازی را به صورت رایگان - پولی
+                    از طریق سیستم طبقه بندی شده به کاربر ارائه می دهد. در بازی
+                    Call of Duty Mobile نیز سازنده یعنی Activision Publishing در
+                    هر فصل یک بتل پس با 50 مرحله/چالش را به کاربر ارائه می دهد
+                    که با انجام آن ها امتیاز به دست می اورید و با این امتیازهای
+                    کسب شده می توانید اسکین؛ تفنگ و دیگر آیتم های بازی را بخرید.
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(6)" class="preview-comments">
+                  <p>
+                    به طور کلی در صنعت بازی های ویدئویی Battle pass یک نوع روش
+                    کسب درآمد است که محتوای اضافه بازی را به صورت رایگان - پولی
+                    از طریق سیستم طبقه بندی شده به کاربر ارائه می دهد. در بازی
+                    Call of Duty Mobile نیز سازنده یعنی Activision Publishing در
+                    هر فصل یک بتل پس با 50 مرحله/چالش را به کاربر ارائه می دهد
+                    که با انجام آن ها امتیاز به دست می اورید و با این امتیازهای
+                    کسب شده می توانید اسکین؛ تفنگ و دیگر آیتم های بازی را بخرید.
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+                <div onclick="viewcomment(6)" class="preview-comments">
+                  <p>
+                    به طور کلی در صنعت بازی های ویدئویی Battle pass یک نوع روش
+                    کسب درآمد است که محتوای اضافه بازی را به صورت رایگان - پولی
+                    از طریق سیستم طبقه بندی شده به کاربر ارائه می دهد. در بازی
+                    Call of Duty Mobile نیز سازنده یعنی Activision Publishing در
+                    هر فصل یک بتل پس با 50 مرحله/چالش را به کاربر ارائه می دهد
+                    که با انجام آن ها امتیاز به دست می اورید و با این امتیازهای
+                    کسب شده می توانید اسکین؛ تفنگ و دیگر آیتم های بازی را بخرید.
+                  </p>
+                  <div class="comment-type">
+                    <img src="Pics/icons/video-c.png" alt="comment type" />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="comment-responses" style="display: none">
+            <section class="comment-options">
+              <div id="edit-text">ویرایش</div>
+              <div>تایید</div>
+              <div>حذف</div>
+              <div id="open-input">پاسخ</div>
+            </section>
+            <section style="display: none" class="comment-answer">
+              <textarea name="answer" id="comment-answer"></textarea>
+              <button id="comment-answer-send">ارسال</button>
+            </section>
+          </div>
+        </article>
+        <article style="display: none" dir="rtl" class="magazines">
+          <div>
+            <section class="edit-magazines">
+              <div>
+                <div class="mag-top-cont">
+                  <div class="magazines-title">
+                    <input type="text" value="تیتر" />
+                  </div>
+                  <div class="magazines-image">
+                    <img src="Pics/magazine/strech.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="magazines-text">
+                  <textarea id="landmark-text">متن مقاله</textarea>
+                </div>
+                <div class="magazines-btn">
+                  <button id="landmark-send">ثبت</button>
+                </div>
+              </div>
+            </section>
+            <section class="magazines-preview-holder">
+              <div>
+                <div class="magazines-preview">
+                  <h4>رژیم غذایی سالم</h4>
+                  <img src="Pics/magazine/fruit.jfif" alt="magazine preview" />
+                </div>
+                <div class="magazines-preview">
+                  <h4>برنامه تمرینی</h4>
+                  <img src="Pics/magazine/strech.jpg" alt="magazine preview" />
+                </div>
+                <div class="magazines-preview">
+                  <h4>سالم بودن از نظر احساسی</h4>
+                  <img src="Pics/magazine/heart.jpg" alt="magazine preview" />
+                </div>
+                <div class="magazines-preview">
+                  <h4>گذراندن وقت با دوستانتان</h4>
+                  <img src="Pics/magazine/patient.jpg" alt="magazine preview" />
+                </div>
+              </div>
+            </section>
+          </div>
+        </article>
+        <article style="display: none" dir="rtl" class="packages">
+          <div>
+            <section class="edit-packs">
+              <div>
+                <div class="packs-title">
+                  <input type="text" value="قیمت های پکیج: بوتاکس" />
+                </div>
+                <div class="pack-price">
+                  <div class="packs-title">
+                    <input class="pack-pricees" type="text" value="178$" />
+                  </div>
+                  <div class="packs-title">
+                    <input
+                      id="pricees2"
+                      class="pack-pricees"
+                      type="text"
+                      value="199$"
+                    />
+                  </div>
+                  <div class="packs-title">
+                    <input
+                      id="pricees3"
+                      class="pack-pricees"
+                      type="text"
+                      value="210$"
+                    />
+                  </div>
+                </div>
+                <div class="packs-btn">
+                  <button id="landmark-send">ثبت</button>
+                </div>
+              </div>
+            </section>
+            <section class="packs-preview-holder">
+              <div>
+                <div class="packs-preview">جراحی آپاندیس</div>
+                <div class="packs-preview">پیوند کلیه</div>
+                <div class="packs-preview">لیفت صورت</div>
+                <div class="packs-preview">کاشت مو</div>
+                <div class="packs-preview">بوتاکس</div>
+                <div class="packs-preview">جراحی فک</div>
+                <div class="packs-preview">جراحی زیبایی بینی</div>
+                <div class="packs-preview">پوست‌سابی</div>
+                <div class="packs-preview">ابدومینوپلاستی</div>
+                <div class="packs-preview">جراحی ترمیمی</div>
+                <div class="packs-preview">جراحی چشم</div>
+              </div>
+            </section>
+          </div>
+        </article>
+        <article style="display: none" dir="rtl" class="hotels">
+          <div>
+            <section class="edit-hotels">
+              <div>
+                <div class="mag-top-cont">
+                  <div class="hotel-in">
+                    <div class="hotels-title" id="hotel-ttl">
+                      <input type="text" value="هتل بین المللی آذین" />
+                    </div>
+                    <div class="hotels-text">
+                      <textarea id="landmark-text">
+هتل بین المللی آذین اولین هتل 4 ستاره استانداردسازی شده در استان سرسبز گلستان و در شهرستان زیبای گرگان و در مسیر جاده تهران گرگان و مدخل ورودی شهر قرار دارد . این هتل از شمال به دشت زیبای ترکمن و از جنوب به کوهها و جنگل سرسبز گلستان و از غرب به دشت زیبای ترکمن و جاده تهران گرگان و از شرق به شهر گرگان مشرف می باشد.</textarea
+                      >
+                    </div>
+                  </div>
+                  <div class="hotels-image">
+                    <img src="Pics/hotels/hotel8.webp" alt="" />
+                  </div>
+                </div>
+                <div class="hotels-title">
+                  <label>قیمت یک شب: </label>
+                  <input type="text" value="18$" />
+                </div>
+                <div class="hotels-title">
+                  <label>رستوران: </label>
+                  <input type="text" value="دارد" />
+                </div>
+                <div class="hotels-title">
+                  <label>باشگاه: </label>
+                  <input type="text" value="دارد" />
+                </div>
+                <div class="hotels-title">
+                  <label>استخر: </label>
+                  <input type="text" value="ندارد" />
+                </div>
+                <div class="hotels-title">
+                  <label>ویو: </label>
+                  <input type="text" value="دریا" />
+                </div>
+                <div class="hotels-btn">
+                  <button id="landmark-send">ثبت</button>
+                </div>
+              </div>
+            </section>
+            <section class="packs-preview-holder">
+              <div>
+                <div class="hotels-preview">هتل پارتیا گرگان</div>
+                <div class="hotels-preview">هتل شهاب ناهارخوران گرگان</div>
+                <div class="hotels-preview">هتل آپارتمان گل نرگس گرگان</div>
+                <div class="hotels-preview">هتل بوتانیک گرگان</div>
+                <div class="hotels-preview">هتل جهانگردی ناهارخوران گرگان</div>
+                <div class="hotels-preview">هتل زیارت گرگان</div>
+                <div class="hotels-preview">مرکز آموزشی رفاهی فرهنگیان</div>
+                <div class="hotels-preview">هتل بین المللی آذین</div>
+              </div>
+            </section>
+          </div>
+        </article>
+        <article style="display: none" class="doctors" dir="rtl">
+          <div>
+            <section class="edit-doctors">
+              <div>
+                <div class="doc-pic-name">
+                  <div class="doctors-image">
+                    <img src="Pics/Doctors/mohseni-ortoped.jfif" alt="" />
+                  </div>
+                  <div class="doctors-title">
+                    <input type="text" value="دکتر نیما محسنی" />
+                  </div>
+                </div>
+                <div class="doc-job-year">
+                  <div class="doctors-title">
+                    <input type="text" value="تخصص: گوش و حلق و بینی" />
+                  </div>
+                  <div class="doctors-title">
+                    <input type="text" value="17 سابقه کاری در بیمارستان" />
+                  </div>
+                </div>
+                <div class="doctors-text">
+                  <textarea>
+تعدادی از دکترهای زنان ترجیح می‌دهند فقط در یکی از این رشته‌ها کار کنند و وارد رشته‌ی دیگر نشوند. مثلا عده‌ای از دکترهای زنان تعداد در مسائل بهداشتی زنان ورود می‌کنند و کاری به حاملگی و زایمان ندارند. حتی ممکن است تعدادی از دکترهای زنان و زایمان که در بخش زایمان تخصص دارند، ترجیح بدهند فقط در زایمان طبیعی حضور داشته باشند و در جراحی‌هایی مثل سزارین دخالت نکنند.</textarea
+                  >
+                </div>
+                <div class="doc-urls">
+                  <div class="doctors-title">
+                    <label>لینک تلگرام: </label>
+                    <input type="text" value="https://tme/doctornima" />
+                  </div>
+                  <div class="doctors-title">
+                    <label>لینک واتس‌آپ: </label>
+                    <input type="text" value="https://whatsappme/doctornima" />
+                  </div>
+                  <div class="doctors-title">
+                    <label>شماره تلفن: </label>
+                    <input type="text" value="09118080373" />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="doctors-preview-holder">
+              <div>
+                <div class="doctors-preview">دکتر مهری مهراد</div>
+                <div class="doctors-preview">دکتر مسعود شیروانی</div>
+                <div class="doctors-preview">حامد قدسی</div>
+                <div class="doctors-preview">محسن یزدانیان</div>
+                <div class="doctors-preview">پروفسور توفیق موسیوند</div>
+                <div class="doctors-preview">علی اصغر خدا دوست</div>
+                <div class="doctors-preview">پروفسور مجید سمیعی</div>
+                <div class="doctors-preview">محمد حسین ماندگار</div>
+                <div class="doctors-preview">دکتر باقر شاهوردیانی</div>
+                <div class="doctors-preview">لیدا نمازی</div>
+                <div class="doctors-preview">لیلا دلخواه اكبری</div>
+                <div class="doctors-preview">نیما محسنی</div>
+                <div class="doctors-preview">دنیا افشارچی</div>
+                <div class="doctors-preview">فاطمه نیك پور</div>
+                <div class="doctors-preview">بیتا هرمز</div>
+              </div>
+            </section>
+          </div>
+        </article>
+        <article style="display: none" class="landmarks" dir="rtl">
+          <div>
+            <section class="edit-landmarks">
+              <div>
+                <div class="landmark-title">
+                  <input type="text" value="اسم مکان" />
+                </div>
+                <div class="landmark-image">
+                  <img src="Pics/landmarks/gel-feshan.jpg" alt="" />
+                </div>
+                <div class="landmark-text">
+                  <textarea id="landmark-text">متن مکان</textarea>
+                </div>
+                <div class="landmark-btn">
+                  <button id="landmark-send">ثبت</button>
+                </div>
+              </div>
+            </section>
+            <section class="landmarks-preview-holder">
+              <div>
+                <div class="landmarks-preview">
+                  <h4>گل فشان</h4>
+                  <img
+                    src="Pics/landmarks/gel-feshan.jpg"
+                    alt="landmrk preview"
+                  />
+                </div>
+                <div class="landmarks-preview">
+                  <h4>قلعه ماران</h4>
+                  <img
+                    src="Pics/landmarks/ghalemaran.jpeg"
+                    alt="landmrk preview"
+                  />
+                </div>
+                <div class="landmarks-preview">
+                  <h4>گرگان</h4>
+                  <img src="Pics/landmarks/gorgan.png" alt="landmrk preview" />
+                </div>
+                <div class="landmarks-preview">
+                  <h4>خالد نبی</h4>
+                  <img
+                    src="Pics/landmarks/tomb-of-khaled-nabi05.jpg"
+                    alt="landmrk preview"
+                  />
+                </div>
+                <div class="landmarks-preview">
+                  <h4>بندرترکمن</h4>
+                  <img
+                    src="Pics/landmarks/اسکله-بندرترکمن-هادی-کریمی.jpg"
+                    alt="landmrk preview"
+                  />
+                </div>
+                <div class="landmarks-preview">
+                  <h4>جهان نما</h4>
+                  <img
+                    src="Pics/landmarks/منطقه-حفاظت-شده-جهان-نما.jpg"
+                    alt="landmrk preview"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+        </article>
+        <article class="videos" style="display: none">
+          <div>
+            <div class="videos-holder">
+              <h1>ویدئو های فعلی:</h1>
+              <div class="vid-cont">
+                <video
+                  src="Vids/Hospital Videos- 1.mp4"
+                  class="scroll-vid"
+                  autoplay
+                  muted
+                ></video>
+                <div class="scroll-right">
+                  <img src="Pics/icons/pointer-right.png" alt="scroll" />
+                </div>
+                <div class="scroll-left">
+                  <img src="Pics/icons/pointer-left.png" alt="scroll" />
+                </div>
+              </div>
+            </div>
+            <div class="change-videos">
+              <h3>برای تغییر ویدئو به روی آن کلیک کنید</h3>
+              <div class="change-vid-cont">
+                <div>
+                  <div class="vid-preview"><video controls></video></div>
+                  <div class="vid-options">
+                    <div>تغییر</div>
+                    <div>حذف</div>
+                    <div>اضافه</div>
+                  </div>
+                </div>
+                <div class="video-input">
+                  <input type="text" placeholder="لینک ویدئو جدید" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </aside>
+    </main>
+  </body>
+  <script src="Scripts/dashboard.js"></script>
+</html>

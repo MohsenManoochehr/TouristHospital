@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="Fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظرات و انتقادات</title>
+    <link rel="icon" href="Pics/2020-EB-HCA-Healthcare-FC.png">
+    <link rel="stylesheet" href="Styles/comment.css">
+    <link rel="stylesheet" href="Styles/footer-header-responsive.css">
+</head>
+    <body style="color: var(--darkblue);">
+    <header>
+        <nav class="top-head">
+            <div id="social-media">
+                <img src="Pics/social media icons/Instagram.png" alt="icon">
+                <img src="Pics/social media icons/YouTube.png" alt="icon">
+                <img src="Pics/social media icons/WhatsApp.png" alt="icon">
+                <img src="Pics/social media icons/Twitter.png" alt="icon">
+                <img src="Pics/social media icons/Telegram.png" alt="icon">
+                <img src="Pics/social media icons/Email.png" alt="icon">
+            </div>
+            <div id="date">date</div>
+            <div id="select-lang"><p style="color: white;">Language</p><img src="Pics/icons/select-lang.png" alt="lang"></div>
+            <div id="num">021 - 4343 0000</div>
+        </nav>
+        <nav class="down-head">
+
+            <div class="ham-menu">
+                <img src="Pics/icons/menu.png" alt="menu">
+                <div class="blur-menu">
+                    <ul class="ham-ul">
+                        <li><a href="home.html">صفحه اصلی</a></li>
+                        <li><a target="_blank" href="intro.html">آشنایی با بیمارستان</li></a>
+                        <li><a target="_blank" href="departments.html">دپارتمان ها</li></a>
+                        <li><a target="_blank" href="doctors.html">پزشکان</li></a>
+                        <li><a target="_blank" href="price.html">تعرفه ها</li></a>
+                        <li><a target="_blank" href="problem.html">سوالات متداول</li></a>
+                        <li><a target="_blank" href="article.html">مقالات آموزشی</li></a>
+                        <li><a target="_blank" href="hotel.html">هتلینگ</li></a>
+                        <li><a target="_blank" href="contact.html">ارتباط با ما</li></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="ul-hz">
+                <ul>
+                    <li><a href="home.html">صفحه اصلی</a></li>
+                    <li><a target="_blank" href="intro.html">آشنایی با بیمارستان</li></a>
+                    <li><a target="_blank" href="departments.html">دپارتمان ها</li></a>
+                    <li><a target="_blank" href="doctors.html">پزشکان</li></a>
+                    <li><a target="_blank" href="price.html">تعرفه ها</li></a>
+                    <li><a target="_blank" href="problem.html">سوالات متداول</li></a>
+                    <li><a target="_blank" href="article.html">مقالات آموزشی</li></a>
+                    <li><a target="_blank" href="hotel.html">هتلینگ</li></a>
+                    <li><a target="_blank" href="contact.html">ارتباط با ما</li></a>
+                </ul>
+            </div>
+            <div><img src="Pics/2020-EB-HCA-Healthcare-FC.png" alt="logo"></div>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="right">
+            <div class="all-title"><div><img src="Pics/icons/communication.png" alt="hospital icon"><p>نظرات و انتقادات</p></div><a href="#"></a></div>
+            <article class="form1">
+                <div class="form-container">
+                    <form action="#">
+                        <div class="user-info">
+                            <input placeholder="نام و نام‌خانوادگی" type="text" name="name" id="name">
+                            <input placeholder="Email" type="email" name="name" id="name">
+                        </div>
+                        <div class="user-text">
+                            <textarea style="resize: none;" id="comment" name="comment" rows="4" cols="50" placeholder="نظرات خود را بنویسید..."></textarea>
+                        </div>
+                        <div class="send">
+                            <input type="submit" value="ارسال">
+                        </div>
+                    </form>
+                </div>
+            </article>
+            <article class="form2" style="display: none;">
+                <div class="form-container">
+                    <form action="#">
+                        <div class="user-info">
+                            <input placeholder="نام و نام‌خانوادگی" type="text" name="name" id="name">
+                            <input placeholder="Email" type="email" name="name" id="name">
+                        </div>
+                        <div class="user-img">
+                            <div class="img-caption">
+                                <textarea placeholder="متن عکس خود را بنویسید..." name="caption" id="caption" cols="5" rows="5"></textarea>
+                                <input type="file" accept="image/*" onchange="loadFile(event)">
+                            </div>
+                            <img id="output"/>
+                            <script>
+                              var loadFile = function(event) {
+                                var output = document.getElementById('output');
+                                output.src = URL.createObjectURL(event.target.files[0]);
+                                output.onload = function() {
+                                  URL.revokeObjectURL(output.src) 
+                                }
+                              };
+                            </script>
+                        </div>
+                        <div class="send">
+                            <input type="submit" value="ارسال">
+                        </div>
+                    </form>
+                </div>
+            </article>
+            <article class="form3" style="display: none;">
+                <div class="form-container">
+                    <form action="#">
+                        <div class="user-info">
+                            <input placeholder="نام و نام‌خانوادگی" type="text" name="name" id="name">
+                            <input placeholder="Email" type="email" name="name" id="name">
+                        </div>
+                        <div class="user-img user-vid">
+                            <div class="img-caption">
+                                <textarea placeholder="متن ویدئو خود را بنویسید..." name="caption" id="caption" cols="5" rows="5"></textarea>
+                                <input type='file'  id='videoUpload' />
+                            </div>
+                            <video controls>
+                                Your browser does not support the video tag.
+                              </video>
+                            <script>
+                                document.getElementById("videoUpload")
+                                .onchange = function(event) {
+                                  let file = event.target.files[0];
+                                  let blobURL = URL.createObjectURL(file);
+                                  document.querySelector("video").src = blobURL;
+                                }
+                            </script>
+                        </div>
+                        <div class="send">
+                            <input type="submit" value="ارسال">
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </aside>
+        <aside class="left">
+            <div class="fixed-options">
+                <div class="top-symbol">
+                    <img src="Pics/doctor-symbol-universal-png-2.png" alt="doctor symbol">
+                    <h1>گردشگری سلامت گرگان</h1>
+                </div>
+                <div class="options">
+                    <div onclick="show(0)">نظرات متنی</div>
+                    <div onclick="show(1)">نظرات تصویری</div>
+                    <div onclick="show(2)">نظرات ویدئویی</div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="foot-up">
+            <div class="address">
+                <h6>آدرس</h6>
+                <p>استان گلستان، شهرستان گرگان، میدان هزارجریبی، خیابان ایرانمهر، کوچه ابوذر یازده، فرعی اول، بن‌بست دوم</p>
+                <h6><img src="Pics/icons/free-phone-icon-504-thumb.png" alt="phone">شماره تماس</h6>
+                <p>0000 - 4343 - 021</p>
+                <div id="social-media">
+                    <img src="Pics/social media icons/Instagram.png" alt="icon">
+                    <img src="Pics/social media icons/YouTube.png" alt="icon">
+                    <img src="Pics/social media icons/WhatsApp.png" alt="icon">
+                    <img src="Pics/social media icons/Twitter.png" alt="icon">
+                    <img src="Pics/social media icons/Telegram.png" alt="icon">
+                    <img src="Pics/social media icons/Email.png" alt="icon">
+                </div>
+            </div>
+            <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1035.2642630979476!2d54.41924366932823!3d36.83788930879461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f834983e2b37369%3A0x1a48c12147882c02!2z2LTYsdqp2KogVHNjb2RlICwg2LfYsdin2K3bjCDYs9in24zYqiDYjCDYqNix2YbYp9mF2Ycg2YbZiNuM2LPbjA!5e0!3m2!1sen!2sus!4v1689586969595!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+        <div class="foot-mid">
+            <span>
+                <img src="Pics/2020-EB-HCA-Healthcare-FC.png" alt="logo">
+                <h2>درباره ما</h2>
+            </span>
+            <p>IRHTO که به عنوان برند گردشگری سلامت ایران توسط مؤسسه خدمات بین المللی سلامت تأسیس و فعالیتش را از سال ۸۵ با همکاری سازمان ها و نهادهای دولتی، خصوصی، آموزشی و دانشگاهی با محوریت صادرات خدمات سلامت آغاز نمود، ابتدا از طریق ده ها کنفرانس و کنگره ی تخصصی و همچنین اعزام هیأت ویژه به کشورهای منطقه، مطالعات میدانی خود را به منظور شناسایی چراییِ و موانع عدم شکل گیری و توسعه ی صنعت گردشگری به معنای عام و گردشگری سلامت در معنای خاص آن و نهایتاً ارائه ی راهکار اجرایی برای معرفی توانمندی ایران بسط داده تا در زمینه اجرا، چشم انداز مثبت را تبیین نماید.</p>
+        </div>
+        <div class="foot-end">
+            <div class="foot-third">
+                <div>کلیه حقوق مربوط به وبسایت گردشگری سلامت، محفوظ میباشد.</div>
+                <div>طراحی و بهینه سازی سایت توسط TScode</div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="Scripts/comment.js"></script>
+<script src="Scripts/responsive.js"></script>
+</html>

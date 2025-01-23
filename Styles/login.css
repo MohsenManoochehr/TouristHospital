@@ -1,0 +1,129 @@
+@font-face {
+    font-family: Shabnam;
+    src: url("../Fonts/shabnam-font-v5.0.1/Shabnam.woff");
+}
+
+@font-face {
+    font-family: FarsiDigits;
+    src: url("../Fonts/shabnam-font-v5.0.1/Shabnam-FD.woff");
+}
+
+:root {
+    --blue: rgb(85, 170, 163);
+    --lightblue: rgb(181, 220, 217);
+    --darkblue: rgb(38, 38, 38);
+    --medblue: rgb(30, 111, 102);
+    --grey: rgb(169, 169, 169);
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--darkblue);
+    margin: 0;
+    font-family: FarsiDigits;
+    transition: all 0.3s ease;
+}
+
+html {
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.vid-cont video {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.all > div {
+    margin-bottom: 20px;
+}
+
+.vid-cont {
+    width: 35%;
+    margin: auto;
+    margin-top: 40px;
+    filter: drop-shadow(5px 5px 5px rgb(81, 81, 81));
+}
+
+.title {
+    text-align: center;
+}
+
+.login-div {
+    width: 430px;
+    padding: 30px 35px 10px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: 13px 13px 20px #cbced1,
+    -13px -13px 20px #fff;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.fields {
+    width: 100%;
+    padding: 5px;
+}
+
+.fields input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 10px 5px;
+}
+
+.username, .password {
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+    inset -8px -8px 8px #fff;
+    margin-bottom: 30px;
+}
+
+.fields svg {
+    height: 22px;
+    margin: 0 10px -3px 25px;
+}
+
+.signin-button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    background-color: var(--lightblue);
+    box-shadow: 3px 3px 8px #b1b1b1,
+    -3px -3px 8px #fff;
+    transition: all 0.5s;
+}
+
+.signin-button:hover {
+    background-color: var(--blue);
+}
+
+.signin-status {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+    font-size: 12px;
+    color: red;
+    font-weight: 700;
+    transition: .2s linear;
+}
+
+.btn-holder {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-holder a {
+    color: var(--medblue);
+}
